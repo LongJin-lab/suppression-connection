@@ -78,11 +78,11 @@ python3 trainTuning.py --data-dir  ./datasets/  --log-dir ./log/ShareExpDecayLea
  --CoesLR  0.001  --desc ShareExpDecayLearnDecay_AbsExp_Ini0p5_RestaLayerIdx3
 ```
 ### CIFAR
-To train the PreResNet110 (4x) with the residual connection (baseline):
+To train the PreResNet110 (4x) with the residual connection (baseline) on CIFAR100:
 ```python
 python3 TrainAndPlotTuning.py --arch  ZeroSAny110settings   --minimizer None --rho 0.5 --eta 0.01 --ini_stepsize 1 --eps_iter 0.01 --nb_iter 7  --notes  SumBase_ab1  --givenA   1 0   --givenB  -1 0  --lr 0.1 --bs 128 --opt SGD --dataset cifar100 --sche cos --steps  2  --eps  0.031  --IniDecay  0.07  --settings BnReluConv_ConvStride2ResLike --CoesLR  0.04  --save_path ./runs/cifar100/ --eps  0.031  --ConverOrd  1  --epoch 200 --warm 0 
 ```
-To train the PreResNet110 (4x) with the suppression connection (ours):
+To train the PreResNet110 (4x) with the suppression connection (ours) on CIFAR100:
 ```python
 python3 TrainAndPlotTuning.py --arch  ZeroSAny110settings   --minimizer None --rho 0.5 --eta 0.01 --ini_stepsize 1 --eps_iter 0.01 --nb_iter 7  --notes  SumBase_ab1  --givenA   1 0   --givenB  -1 0  --lr 0.1 --bs 128 --opt SGD --dataset cifar100 --sche cos --steps  2  --eps  0.031  --IniDecay  0.07  --settings BnReluConv_ConvStride2ResLike_ShareExpDecayLearnDecay_AbsExp_Adam_RestaLayerIdx3 --CoesLR  0.04  --save_path ./runs/cifar100/ --eps  0.031  --ConverOrd  1  --epoch 200 --warm 0 
 ```
