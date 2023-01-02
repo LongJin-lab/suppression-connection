@@ -63,17 +63,17 @@ To train the PreResNet50 with the suppression connection (ours):
 ./distributed_train1.sh 8  /tmp/_datasets/imagenet/ -b 256 --model convernetv2_38d  --givenA 1 0 --givenB -1 0 --ConverOrd 1 --notes CosConOrd1PreAct1ShareExpDecayLearnDecay --sched cosine --epochs 90 --lr 0.8 --amp --dist-bn reduce --warmup-epochs 10 --cooldown-epochs 0 --pin-mem -j 4 --settings ShareExpDecayLearnDecay_AbsExp_Adam_RestaLayerIdx3 --IniDecay 0.7
 ```
 ### Adversarial
-To train the PreResNet50 with the residual connection (baseline):
+To train the WRN-58-1 with the residual connection (baseline):
 ```python
 python3 trainTuning.py --data-dir  ./datasets/  --log-dir ./log/Default --attack-step  0.00784313725490196  --attack-eps  0.03137254901960784  --settings Default --unsup-fraction  0.7  --LSE --ls  0
 --adv-eval-freq  20  --coesB  -1 0  --learn
- False  --IniRes  False  --Mask  False  --IniCh  8  --data cifar100 --batch-size  512  --model  nrn-70-1-swish-learn  --num-adv-epochs  110  --lr  0.2  --scheduler  step  --beta  6.0  --attack  linf-pgd  --IniDecay  0.2
+ False  --IniRes  False  --Mask  False  --IniCh  8  --data cifar10 --batch-size  512  --model  nrn-58-1-swish-learn  --num-adv-epochs  110  --lr  0.2  --scheduler  step  --beta  6.0  --attack  linf-pgd  --IniDecay  0.2
  --CoesLR  0.001  --desc Default
 ```
-To train the PreResNet50 with the suppression connection (ours):
+To train the WRN-58-1 with the suppression connection (ours):
 ```python
 python3 trainTuning.py --data-dir  ./datasets/  --log-dir ./log/ShareExpDecayLearnDecay_AbsExp_Ini0p5_RestaLayerIdx3 --attack-step  0.00784313725490196  --attack-eps  0.03137254901960784  --settings ShareExpDecayLearnDecay_AbsExp_Ini0p5_RestaLayerIdx3 --unsup-fraction  0.7  --LSE --ls  0
 --adv-eval-freq  20  --coesB  -1 0  --learn
- False  --IniRes  False  --Mask  False  --IniCh  8  --data cifar100 --batch-size  512  --model  nrn-70-1-swish-learn  --num-adv-epochs  110  --lr  0.2  --scheduler  step  --beta  6.0  --attack  linf-pgd  --IniDecay  0.2
+ False  --IniRes  False  --Mask  False  --IniCh  8  --data cifar10 --batch-size  512  --model  nrn-58-1-swish-learn  --num-adv-epochs  110  --lr  0.2  --scheduler  step  --beta  6.0  --attack  linf-pgd  --IniDecay  0.2
  --CoesLR  0.001  --desc ShareExpDecayLearnDecay_AbsExp_Ini0p5_RestaLayerIdx3
 ```
