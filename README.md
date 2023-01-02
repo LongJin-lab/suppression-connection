@@ -54,11 +54,11 @@ To train the PreResNet50 with the suppression connection (ours):
 ./distributed_train1.sh 8  /tmp/_datasets/imagenet/ -b 256 --model convernetv2_50d  --givenA 1 0 --givenB -1 0 --ConverOrd 1 --notes CosConOrd1PreAct1ShareExpDecayLearnDecay --sched cosine --epochs 90 --lr 0.8 --amp --dist-bn reduce --warmup-epochs 10 --cooldown-epochs 0 --pin-mem -j 4 --settings ShareExpDecayLearnDecay_AbsExp_Adam_RestaLayerIdx3 --IniDecay 0.7
 ```
 
-To train the PreResNet50 with the residual connection (baseline):
+To train the PreResNet38 with the residual connection (baseline):
 ```python
 ./distributed_train1.sh 8  /tmp/_datasets/imagenet/ -b 256 --model convernetv2_38d  --givenA 1 0 --givenB -1 0 --ConverOrd 1 --notes CosConOrd1PreAct1Default --sched cosine --epochs 90 --lr 0.8 --amp --dist-bn reduce --warmup-epochs 10 --cooldown-epochs 0 --pin-mem -j 4 --settings Default --IniDecay 0.7
 ```
-To train the PreResNet50 with the suppression connection (ours):
+To train the PreResNet38 with the suppression connection (ours):
 ```python
 ./distributed_train1.sh 8  /tmp/_datasets/imagenet/ -b 256 --model convernetv2_38d  --givenA 1 0 --givenB -1 0 --ConverOrd 1 --notes CosConOrd1PreAct1ShareExpDecayLearnDecay --sched cosine --epochs 90 --lr 0.8 --amp --dist-bn reduce --warmup-epochs 10 --cooldown-epochs 0 --pin-mem -j 4 --settings ShareExpDecayLearnDecay_AbsExp_Adam_RestaLayerIdx3 --IniDecay 0.7
 ```
