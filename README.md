@@ -1,5 +1,5 @@
-# Robustness Requires Different Structures Than Residual Connection
-Code for the paper "Robustness Requires Different Structures Than Residual Connection"
+# Exploring Basic Connections: Robust Alternative to Residual Connection
+Code for the paper "Exploring Basic Connections: Robust Alternative to Residual Connection"
 
 ## Requirements
 
