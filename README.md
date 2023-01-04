@@ -3,10 +3,8 @@ Code for the paper "Exploring Basic Connections: Robust Alternative to Residual 
 
 ## Requirements
 
-- Install or download [AutoAttack](https://github.com/fra31/auto-attack):
-```
-pip install git+https://github.com/fra31/auto-attack
-```
+- comet_ml
+
 ## Training Commands
 ### ImageNet
 To train the ConvNeXt-S with the residual connection (baseline):
