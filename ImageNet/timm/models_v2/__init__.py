@@ -1,3 +1,4 @@
+from .levit import *
 from .resnetv2 import *
 from .convnext_conver import *
 # from .resnetv2_anyorder import *
