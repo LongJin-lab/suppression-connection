@@ -4,6 +4,7 @@ Code for the paper "Exploring Basic Connections: Robust Alternative to Residual 
 ## Requirements
 
 - comet_ml
+- PyTorch
 
 ## Training Commands
 ### ImageNet
