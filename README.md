@@ -1,5 +1,6 @@
-# Exploring Basic Connections: Robust Alternative to Residual Connection
-Code for the paper "Exploring Basic Connections: Robust Alternative to Residual Connection."
+# Exploring Connectivity Patterns: Suppressing Layer-wise Perturbation Growth by Altering Feature Evolution Trajectory
+
+Code for the paper "Exploring Connectivity Patterns: Suppressing Layer-wise Perturbation Growth by Altering Feature Evolution Trajectory."
 
 ## Requirements
 
